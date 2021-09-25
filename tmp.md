@@ -69,3 +69,5 @@ mkdir stow
 echo '--target=~' > stow/.stowrc
 stow stow -t ~
 默认是父文件夹,要么就制定target是~
+
+https://github.com/adi1090x/polybar-themes/tree/master/bitmap/shades/scripts
