@@ -61,6 +61,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh  这个不适合我�
 [jesusrp98/dotfiles: Public configuration files for my GNU+Linux setup.](https://github.com/jesusrp98/dotfiles)
 [adi1090x/polybar-themes: A huge collection of polybar themes with different styles, colors and variants.](https://github.com/adi1090x/polybar-themes)
 
+[Dotfiles - 超赞合集 awesome list chinese](https://asmcn.icopy.site/awesome/awesome-dotfiles/)
 
 [realazy: 使用 Stow 管理 dotfiles](https://realazy.com/posts/2020-11-22-manage-dotfiles-with-stow.html)
 cd ~/Dropbox/dotfiles
