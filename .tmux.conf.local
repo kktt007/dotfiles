@@ -1,0 +1,126 @@
+# https://github.com/topics/tmux
+# https://github.com/tmux-plugins/list
+# 参考https://github.com/statico/dotfiles/blob/main/.tmux.conf
+# git clone https://github.com/erikw/tmux-powerline.git
+# Reload the file with Prefix r.
+# https://github.com/tmux/tmux/wiki/Getting-Started
+# https://man.openbsd.org/tmux#WINDOWS_AND_PANES
+# https://github.com/tmux/tmux/blob/master/CHANGES
+# https://github.com/tmux/tmux/blob/master/cmd-bind-key.c
+
+# "bind-key" "bind"
+
+# "set-option" "set"
+
+# "set-window-option" "setw"
+
+#"source-file" alias source"
+
+# "list-commands" "alias lscm"
+
+set -g prefix C-space
+
+bind C-Space send-prefix
+
+set -g default-terminal "screen-256color"
+# set -g default-terminal "tmux-256color"
+
+# set first window to index 1 (not 0) to map more to the keyboard layout
+set-option -g renumber-windows on
+set -g base-index 1
+setw -g pane-base-index 1
+
+set -g mouse on
+
+# copy and paste
+setw -g mode-keys vi
+bind-key -Tcopy-mode-vi v send -X begin-selection
+bind-key -Tcopy-mode-vi y send -X copy-selection
+bind-key -Tcopy-mode-vi Enter send -X copy-selection
+bind-key -Tcopy-mode-vi Escape send -X cancel
+bind-key -Tcopy-mode-vi MouseDragEnd1Pane send -X stop-dragging-selection
+
+# pane navigation use christoomey/vim-tmux-navigator instead of
+#bind -r h select-pane -L  # move left
+#bind -r j select-pane -D  # move down
+#bind -r k select-pane -U  # move up
+#bind -r l select-pane -R  # move right
+#bind > swap-pane -D       # swap current pane with the next one
+#bind < swap-pane -U       # swap current pane with the previous one
+
+# pane resizing
+bind -r H resize-pane -L 2
+bind -r J resize-pane -D 2
+bind -r K resize-pane -U 2
+bind -r L resize-pane -R 2
+
+# create session
+bind C-n new-session
+
+# find session
+bind C-f command-prompt -p find-session 'switch-client -t %%'
+
+# split current window horizontally
+bind - split-window -v
+# split current window vertically
+bind | split-window -h
+
+
+# List of plugins
+# Use prefix–I install
+# prefix–U update
+# prefix + alt + u uninstall
+
+# 主题
+# https://draculatheme.com/tmux
+# set -g @plugin "arcticicestudio/nord-tmux" 备用
+# 主题 https://github.com/erikw/tmux-powerline use ablove theme
+# 以下用于配置powerline主题
+# set-option -g status on
+# set-option -g status-interval 2
+# set-option -g status-justify "centre"
+# set-option -g status-left-length 60
+# set-option -g status-right-length 90
+# set-option -g status-left "#(~/tmux-powerline/powerline.sh left)"
+# set-option -g status-right "#(~/tmux-powerline/powerline.sh right)"
+#bind C-[ run '~/tmux-powerline/mute_powerline.sh left'		# Mute left statusbar.
+#bind C-] run '~/tmux-powerline/mute_powerline.sh right'		# Mute right statusbar.
+
+# tmux source-file ~/.tmux.conf.local
+unbind r
+bind r source-file ~/.tmux.conf.local \; display "Reloaded!"
+
+
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'christoomey/vim-tmux-navigator'
+
+set -g @plugin 'tmux-plugins/tmux-yank'
+
+# prefix + Ctrl-r to restore -- prefix + Ctrl-s - save
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+
+set -g @plugin 'tmux-plugins/tmux-continuum'
+# for vim
+set -g @resurrect-strategy-vim 'session'
+# for neovim
+set -g @resurrect-strategy-nvim 'session'kon
+# Tmux Continuum默认每隔15mins备份一次
+# 关闭自动备份，只需设置时间间隔为 0 即可
+set -g @continuum-save-interval '10'
+# set -g @continuum-restore 'on' 自动还原
+set -g @plugin 'dracula/tmux'
+# available plugins: battery, cpu-usage, gpu-usage, ram-usage, network, network-bandwith, weather, time
+set -g @dracula-plugins "battery network-bandwith time"
+# available colors: white, gray, dark_gray, light_purple, dark_purple, cyan, green, orange, red, pink, yellow
+set -g @dracula-battery-colors "gray green"
+set -g @dracula-network-bandwith-colors "orange white"
+set -g @dracula-time-colors "gray white"
+set -g @dracula-day-month true
+set -g @dracula-border-contrast true
+set -g @dracula-show-flags true
+set -g @dracula-show-powerline true
+set -g @dracula-show-left-icon session
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
