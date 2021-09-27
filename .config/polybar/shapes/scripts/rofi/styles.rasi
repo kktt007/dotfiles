@@ -8,7 +8,7 @@
  */
 
 configuration {
-	font:							"Terminus 9";
+	font:							"MesloLGM Nerd Font Mono";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
     display-drun: 					"";

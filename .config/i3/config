@@ -231,7 +231,7 @@ exec_always --no-startup-id numlockx on
 # 桌面通知
 exec --no-startup-id dunst
 exec --no-startup-id picom -CGb
-bindsym $mod+Shift+p exec --no-startup-id $HOME/.config/polybar/shapes/launch.sh
+bindsym $mod+Shift+p exec --no-startup-id $HOME/.config/polybar/shapes/launcher.sh
 # exec_always --no-startup-id $HOME/.config/polybar/shapes/launch.sh 可以了再用这个当默认
 
 # reload the configuration file
