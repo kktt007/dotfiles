@@ -220,7 +220,7 @@ exec --no-startup-id nm-applet
 # [antoniosarosi/dotfiles](https://github.com/antoniosarosi/dotfiles#basic-utilities)
 
 # rofi
-bindsym $mod+d exec rofi -show drun -theme onedark -show-icons
+bindsym $mod+d exec rofi -show drun -theme config -show-icons
 
 # file-manager
 # bindsym $mod+m exec nautilus --browser
