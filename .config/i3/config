@@ -211,7 +211,7 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+b         exec brave
 
 # Setup NetworkManager
-exec --no-startup-id network-manager-applet
+exec --no-startup-id nm-applet
 
 # [dotfiles/config at master · zorab47/dotfiles](https://github.com/zorab47/dotfiles/blob/master/i3/config)
 
@@ -220,7 +220,7 @@ bindsym $mod+d exec rofi -show drun -theme onedark -show-icons
 
 # file-manager
 # bindsym $mod+m exec nautilus --browser
-# bindsym $mod+m exec alacritty --class=RANGER ranger
+bindsym $mod+m exec ranger
 
 # screenshot
 bindsym $mod+shift+s exec flameshot gui
@@ -231,8 +231,10 @@ exec_always --no-startup-id numlockx on
 # 桌面通知
 exec --no-startup-id dunst
 exec --no-startup-id picom -CGb
-bindsym $mod+Shift+p exec --no-startup-id $HOME/.config/polybar/shapes/launcher.sh
+bindsym $mod+Shift+p exec --no-startup-id $HOME/.config/polybar/shapes/launch.sh
 # exec_always --no-startup-id $HOME/.config/polybar/shapes/launch.sh 可以了再用这个当默认
+
+exec --no-startup-id xrdb -merge ~/.Xresources
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
