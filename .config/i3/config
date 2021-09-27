@@ -208,12 +208,16 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
 
-bindsym $mod+b         exec brave
+bindsym $mod+b exec brave
 
 # Setup NetworkManager
 exec --no-startup-id nm-applet
 
 # [dotfiles/config at master · zorab47/dotfiles](https://github.com/zorab47/dotfiles/blob/master/i3/config)
+
+# [dotfiles/config at master · gempir/dotfiles](https://github.com/gempir/dotfiles/blob/master/.config/i3/config)
+
+# [antoniosarosi/dotfiles](https://github.com/antoniosarosi/dotfiles#basic-utilities)
 
 # rofi
 bindsym $mod+d exec rofi -show drun -theme onedark -show-icons
@@ -226,6 +230,9 @@ bindsym $mod+m exec ranger
 bindsym $mod+shift+s exec flameshot gui
 bindsym $mod+shift+d exec flameshot screen -c
 
+exec --no-startup-id fcitx
+exec --no-startup-id copyq
+
 # 开启小键盘
 exec_always --no-startup-id numlockx on
 # 桌面通知
@@ -234,7 +241,15 @@ exec --no-startup-id picom -CGb
 bindsym $mod+Shift+p exec --no-startup-id $HOME/.config/polybar/shapes/launch.sh
 # exec_always --no-startup-id $HOME/.config/polybar/shapes/launch.sh 可以了再用这个当默认
 
+# [nebulas photo – Free Space Image on Unsplash](https://unsplash.com/photos/QFjSiok61xA)
+# https://www.pexels.com/search/desktop%20wallpaper
+exec_always feh --bg-fill ~/.config/wallpaper.jpg
+
 exec --no-startup-id xrdb -merge ~/.Xresources
+
+# [xrandr - ArchWiki](https://wiki.archlinux.org/title/xrandr#Configuration)
+# exec_always --no-startup-id xrandr --output HDMI-0 --auto --output eDP-1-1 --auto
+# workspace 1 output HDMI-0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
