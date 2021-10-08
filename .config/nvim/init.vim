@@ -1,4 +1,5 @@
 " don't useset lcs = space:..............
+" [The Top 1,214 Vim Plugin Open Source Projects on Github](https://awesomeopensource.com/projects/vim-plugin)
 "https://github.com/rperryng/dotfiles/blob/master/vimrc
 
 "https://github.com/ClausewitzCPU0/VimTutorial
