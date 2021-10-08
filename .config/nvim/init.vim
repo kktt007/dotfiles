@@ -113,6 +113,18 @@ Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
+" TODO
+Plug 'nvim-lua/plenary.nvim'
+Plug 'folke/todo-comments.nvim'
+
+lua << EOF
+  require("todo-comments").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
+EOF
+
 " others
 
 Plug 'vimwiki/vimwiki'
