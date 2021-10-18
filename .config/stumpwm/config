@@ -2,6 +2,7 @@
 
 ;; [dotfiles/.stumpwmrc at master · r0man/dotfiles](https://github.com/r0man/dotfiles/blob/master/stumpwm/.stumpwmrc)
 
+;; [dotfiles/stumpwm.org at master · kwpav/dotfiles](https://github.com/kwpav/dotfiles/blob/master/stumpwm.org)
 (in-package :stumpwm)
 
 (defcommand rofi () ()
