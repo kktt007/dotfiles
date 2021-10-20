@@ -1,0 +1,70 @@
+# https://git-scm.com/docs/git-config#_conditional_includes
+[includeIf "gitdir:~/project/github/"]
+  path = ~/project/github/.gitconfig
+[includeIf "gitdir:~/project/gitee/"]
+  path = ~/project/gitee/.gitconfig
+[user]
+	name = kktt007
+	email = kktt007.top@gmail.com
+
+[credential]
+	helper = store
+	
+[core]
+	editor = nvim
+  autocrlf = false
+
+# [ohmyzsh/plugins/git at master · ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
+
+[alias]
+    ci = commit
+    st = status
+    co = checkout
+    br = branch
+
+[color]
+    ui = true
+    diff = true
+    branch = auto
+    status = auto
+    
+[merge]
+    keepBackup = false
+    tool = meld
+    
+[mergetool]
+    prompt = false
+    
+[mergetool "meld"]
+    cmd = meld "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
+    
+[diff]
+    tool = meld
+    
+[difftool]
+    prompt = false
+    
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
+    
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
