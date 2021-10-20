@@ -1,7 +1,7 @@
 ###
  # @Author: your name
  # @Date: 2021-09-26 09:21:40
- # @LastEditTime: 2021-09-26 09:31:45
+ # @LastEditTime: 2021-10-20 09:52:57
  # @LastEditors: Please set LastEditors
  # @Description: In User Settings Edit
  # @FilePath: \github\dotfiles\.zshrc
@@ -82,6 +82,21 @@ alias .5='cd ../../../../../'               # Go back 5 directory levels
 alias .6='cd ../../../../../../'            # Go back 6 directory levels
 
 alias af='alias-finder'
+
+# [tar(1) - Linux manual page](https://man7.org/linux/man-pages/man1/tar.1.html)
+# j,--bzip2 -J,--xz
+
+alias tar.gz='tar -zcvf'
+alias tar.bz2='tar -jcvf'
+
+## untar
+alias untar='tar -xvzf'
+
+## [aliases.zsh](https://gist.github.com/jasonm23/8552367)
+alias zr="source ~/.zshrc"
+
+alias ka9='killall -9'
+alias k9='kill -9'
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.config/scripts/z.sh

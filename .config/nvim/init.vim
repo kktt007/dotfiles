@@ -1,4 +1,5 @@
 " don't useset lcs = space:..............
+" [The Top 1,214 Vim Plugin Open Source Projects on Github](https://awesomeopensource.com/projects/vim-plugin)
 "https://github.com/rperryng/dotfiles/blob/master/vimrc
 
 "https://github.com/ClausewitzCPU0/VimTutorial
@@ -111,6 +112,18 @@ Plug 'tpope/vim-obsession'
 Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'tmux-plugins/vim-tmux-focus-events'
+
+" TODO
+Plug 'nvim-lua/plenary.nvim'
+Plug 'folke/todo-comments.nvim'
+
+lua << EOF
+  require("todo-comments").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
+EOF
 
 " others
 
