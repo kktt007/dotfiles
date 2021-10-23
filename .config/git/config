@@ -1,8 +1,8 @@
 # https://git-scm.com/docs/git-config#_conditional_includes
 [includeIf "gitdir:~/project/github/"]
-  path = ~/project/github/.gitconfig
+    path = ~/project/github/.gitconfig
 [includeIf "gitdir:~/project/gitee/"]
-  path = ~/project/gitee/.gitconfig
+    path = ~/project/gitee/.gitconfig
 [user]
 	name = kktt007
 	email = kktt007.top@gmail.com
@@ -12,7 +12,7 @@
 	
 [core]
 	editor = nvim
-  autocrlf = false
+    autocrlf = false
 
 # [ohmyzsh/plugins/git at master · ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
 
