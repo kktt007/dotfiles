@@ -1,0 +1,132 @@
+# coding: utf-8
+# 小鹤音形“置顶”用户词库（与系统词条重码时居前）
+# 该文件以UTF-8编码保存
+# 编码格式：字词+Tab符+编码（用户词库本身有重码则还需后面+Tab符+权重，权重大者居前，权重数字随意）
+# 
+#    === 强调一下 === 
+# 
+#   词条和编码之间的不是空格，而是Tab符，如果你不知道，就复制下面编码中的空白处
+#   或者按住键盘 G 键，切换到功能键盘，使用上面的Tab键
+# 
+#    ================
+# 
+# 如两个用户词重码，则需加权重排序，权重大者居前，如下：
+#
+# 同文	tw	90
+# 提问	tw	30
+#
+# 如只加一个用户词，则无需权重，如下（如想居于系统词“台湾”后，请把词条放到flypy_user文件内）：
+#
+# 同文	tw
+#
+# 如和系统词重码且要放中间，如下设置：
+#
+# 技术	jiuu	100
+# 奇数    jiuu	90
+# 既成事实	jiuu	80
+#    ================
+#
+# 虽然文本码表编辑较为方便，但不适合导入大量条目
+# 本词库和系统词重码时置顶。
+
+# 快速符号
+：	;	10
+；	;	20
+：“	;q
+？	;w
+（	;e
+）	;r
+@	;t
+·	;y
+＝	;u
+〈	;i
+〉	;o
+～	;p
+！	;a
+……	;s
+、	;d
+《	;g
+＋	;h
+－	;j
+×	;k
+÷	;l
+“	;z
+→	;x
+”	;c
+——	;v
+》	;b
+〔	;n
+〕	;m
+
+# https://www.cnblogs.com/hellxz/p/10198540.html
+# https://kelvin.mbioq.com/guide-for-configuration-of-rime-input-method-on-linux.html
+# https://github.com/GuoBinyong/wubixinshiji
+#用户置顶词库，此行后开始添加，编码格式见上。切换方案或部署后生效
+# no comment
+#	下面使用的是tab,不是空格，nodepad3需要配置不自动转换，可以开启tab显示
+
+拉勾	lagz
+荔枝	livi
+发行	faxk
+实用	uiys
+即停	jitk
+手柄	uzbk
+一键	yijm
+箱单发票	xdfp
+装箱单	vxdj
+细码单	xmdj
+码单	madj
+箱单	xldj
+椎板	vvbj
+骨钻	guzr
+颅骨	lugu
+克氏针	kuvf
+磨钻	mozr
+钻铣磨	zxmo
+自停	zitk
+铣刀	xidc
+头托	tzto
+牵开	qmkd
+询盘	xypj
+白屏	bdpk
+询价	xyjx
+报关	bcgr
+提单	tidj
+电放	dmfh
+一体化	ythx
+集成	jiig
+蒙板	mgbj
+便携式	bxui
+铝合金	lhjb
+巴士	baui
+陈伟	ifww
+钛合金	thjbw
+阿里	aal
+坚果	jmgo
+曲奇	quqi
+一款	yikr
+纪茹萍	jrp
+金国芳	jgf
+陈红富	ihf
+陈伟	iw
+lan542662	lan
+kktt007	kktt
+kktt007.top	kktt
+kktt914968841	kktt
+cwkktt	kktt
+kktt007.top@gmail.com	mail
+kktt007@icloud.com	mail
+kktt914968841@gmail.com	mail
+cwkktt@gmail.com		mail
+kktt914968841@163.com	yzxl
+kktt007@189.com	yzxl
+kktt914968841@sina.com	yzxl
+http://kktt.ys168.com/	wdwp
+https://pc.woozooo.com/	wdwp
+18921001991	wdhm
+914968841	wdqq
+oss.console.aliyun.com/bucket/oss-cn-shanghai/kktt007/object/	oss
+console.upyun.com/services/kktt007/filemanage/	oss
+portal.qiniu.com/kodo/bucket	oss
+https://i.kktt007.top/img/	img
+https://kktt007.top/	top
