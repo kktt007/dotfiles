@@ -15,6 +15,9 @@
 
 ;; [dot.me/config at master · podiki/dot.me](https://github.com/podiki/dot.me/blob/master/stumpwm/.config/stumpwm/config)
 
+;; [dotfiles/stumpwm.org at master · kwpav/dotfiles](https://github.com/kwpav/dotfiles/blob/master/stumpwm.org?utm_source=pocket_mylist)
+
+;; [stumpwm/bindings.lisp at master · stumpwm/stumpwm](https://github.com/stumpwm/stumpwm/blob/master/bindings.lisp)
 
 (defcommand rofi () ()
   "Start rofi"
