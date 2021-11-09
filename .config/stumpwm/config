@@ -54,3 +54,6 @@
 (update-color-map (current-screen))
 (run-shell-command "xmodmap ~/.Xmodmap")
 (run-shell-command "sh ~/.fehbg")
+
+;;shift+space
+(set-prefix-key (kbd "S-SPC"))
