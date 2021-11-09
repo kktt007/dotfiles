@@ -29,6 +29,24 @@
   (run-shell-command "xmodmap ~/.Xmodmap"))
 (define-key *root-map* (kbd "M-m") "refresh-stuff")
 
+;; UI
+(ql:quickload "clx-truetype")
+(load-module "ttf-fonts")
+(xft:cache-fonts)
+(set-font
+ (make-instance 'xft:font :family "MesloLGM Nerd Font Mono" :subfamily "Regular" :size 14))
+(set '*message-window-padding* 4)
+
+;; Modeline
+(LOAD-MODULE "fuzzytime")
+(SETF *MODE-LINE-TIMEOUT* 60
+      *SCREEN-MODE-LINE-FORMAT* '("%F ^>" (:EVAL (MAIL-INFO)) "     " (:EVAL (BATTERY-INFO)))
+      *MODE-LINE-FOREGROUND-COLOR* "black"
+      *MODE-LINE-BACKGROUND-COLOR* "#EAFFFF"
+      FUZZYTIME:*MINUTE-GRANULARITY* 5
+      FUZZYTIME:*FUZZYTIME-FORMAT* '(:MINUTES :HOURS "^7 in the ^n" :PERIOD "^7 on ^n" :DOW "^7 the ^n" :DAY))
+(TOGGLE-MODE-LINE (CURRENT-SCREEN) (CURRENT-HEAD))
+
 ;; Init
 (update-color-map (current-screen))
 (run-shell-command "xmodmap ~/.Xmodmap")
