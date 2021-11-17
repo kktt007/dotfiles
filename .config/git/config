@@ -13,7 +13,10 @@
 [core]
 	editor = nvim
     autocrlf = false
+	eol = lf
 
+[pull]
+	ff = only
 # [ohmyzsh/plugins/git at master · ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
 
 [alias]
